@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Maker.RemoteWiring;
+using Microsoft.Maker.Serial;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +32,20 @@ namespace MySpeechRecogApp
     /// </summary>
     public sealed partial class ContinuousDictionaryRecog : Page
     {
+        /*******************************************************************************************************************************************/
+
+        //Setup Arduino
+
+        IStream connection;
+        RemoteDevice rguno;
+
+
+
+
+
+        /*******************************************************************************************************************************************/
+
+
         // Reference to the main sample page in order to post status messages.
         private MainPage rootPage;
 
@@ -65,6 +81,21 @@ namespace MySpeechRecogApp
         public ContinuousDictionaryRecog()
         {
             this.InitializeComponent();
+
+            connection = new UsbSerial("VID_10C4", "PID_EA60");
+            rguno = new RemoteDevice(connection);
+
+            connection.ConnectionEstablished += Connection_ConnectionEstablished;
+
+            connection.begin(57600, SerialConfig.SERIAL_8N1);
+        }
+
+        private void Connection_ConnectionEstablished()
+        {
+            var action = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, new Windows.UI.Core.DispatchedHandler(() =>
+           {
+               btnContinuousRecognize.IsEnabled = true;
+           }));
         }
 
         /// <summary>
@@ -412,6 +443,8 @@ namespace MySpeechRecogApp
                 {
                     string backgroundColor = recoResult.SemanticInterpretation.Properties["KEY_BACKGROUND"][0].ToString();
                     colorRectangle.Fill = new SolidColorBrush(getColor(backgroundColor));
+                    rguno.digitalWrite(13, PinState.HIGH);
+
                 }
 
                 // If "background" was matched, but the color rule matched GARBAGE, prompt the user.
@@ -428,6 +461,7 @@ namespace MySpeechRecogApp
                 {
                     string borderColor = recoResult.SemanticInterpretation.Properties["KEY_BORDER"][0].ToString();
                     colorRectangle.Stroke = new SolidColorBrush(getColor(borderColor));
+                    rguno.digitalWrite(13, PinState.LOW);
                 }
 
                 // If "border" was matched, but the color rule matched GARBAGE, prompt the user.
