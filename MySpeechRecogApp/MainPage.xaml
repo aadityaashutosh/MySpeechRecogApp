@@ -27,6 +27,8 @@
                         <Button x:Name="STTusingListContraint_Example" Content="Go to STT Page"
                                 ToolTipService.ToolTip="Text will be played"
                                 Margin="0,0,10,0" Click="STTusingListContraint_Example_Click"/>
+                        <Button x:Name="SRGSContinuous" Content="Go to Continuos Recog"
+                                ToolTipService.ToolTip="Colors Recognized" Margin="0,0,10,0" Click="SRGSContinuous_Click"></Button>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>

@@ -1,18 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  
   <Identity Name="d0d47273-c04e-4048-bec9-8fe00e076829" Publisher="CN=Ashutosh Deshpande" Version="1.0.0.0" />
+  
   <mp:PhoneIdentity PhoneProductId="d0d47273-c04e-4048-bec9-8fe00e076829" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  
+    
   <Properties>
     <DisplayName>MySpeechRecogApp</DisplayName>
     <PublisherDisplayName>Ashutosh Deshpande</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
+  
+    
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
+  
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
+
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MySpeechRecogApp.App">
       <uap:VisualElements DisplayName="MySpeechRecogApp" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="MySpeechRecogApp" BackgroundColor="transparent">
@@ -22,8 +30,25 @@
       </uap:VisualElements>
     </Application>
   </Applications>
+  
+    
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="privateNetworkClientServer"/>
+    <Capability Name="internetClientServer"/>
     <DeviceCapability Name="microphone" />
+    
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort"/>
+      </Device>
+    </DeviceCapability>
+  
+    <DeviceCapability Name="bluetooth.rfcomm">
+      <Device Id="any">
+        <Function Type="name:serialPort"/>
+      </Device>
+    </DeviceCapability>
   </Capabilities>
+
 </Package>

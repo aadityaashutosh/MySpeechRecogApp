@@ -245,11 +245,17 @@ namespace MySpeechRecogApp
                         new List<string>()
                         {
                         speechResourceMap.GetValue("ListGrammarHelloAaditya",speechContext).ValueAsString,
+                        speechResourceMap.GetValue("ListGrammarHelloAshutosh",speechContext).ValueAsString,
                         speechResourceMap.GetValue("ListGrammarHelloMayank",speechContext).ValueAsString,
                         speechResourceMap.GetValue("ListGrammarHelloAshish",speechContext).ValueAsString,
                         speechResourceMap.GetValue("ListGrammarHelloAbhay",speechContext).ValueAsString,
                         speechResourceMap.GetValue("ListGrammarHelloAnimesh",speechContext).ValueAsString,
                         speechResourceMap.GetValue("ListGrammarHelloAvinash",speechContext).ValueAsString,
+                        speechResourceMap.GetValue("ListGrammarHelloHarish",speechContext).ValueAsString,
+                        speechResourceMap.GetValue("ListGrammarHelloBhupesh",speechContext).ValueAsString,
+                        speechResourceMap.GetValue("ListGrammarHelloPrashant",speechContext).ValueAsString,
+                        speechResourceMap.GetValue("ListGrammarHelloSujoy",speechContext).ValueAsString,
+                        speechResourceMap.GetValue("ListGrammarHelloSujoyMukherjee",speechContext).ValueAsString,
                         speechResourceMap.GetValue("ListGrammarHelloTanveer",speechContext).ValueAsString
                         },"Hello"));
 

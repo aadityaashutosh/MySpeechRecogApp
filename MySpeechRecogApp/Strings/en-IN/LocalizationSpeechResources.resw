@@ -156,17 +156,35 @@
   <data name="ListGrammarHelloAshish" xml:space="preserve">
     <value>Hello Ashish</value>
   </data>
+  <data name="ListGrammarHelloAshutosh" xml:space="preserve">
+    <value>Hello Ashutosh</value>
+  </data>
   <data name="ListGrammarHelloAvinash" xml:space="preserve">
     <value>Hello Avinash</value>
   </data>
+  <data name="ListGrammarHelloBhupesh" xml:space="preserve">
+    <value>Hello Bhupesh</value>
+  </data>
+  <data name="ListGrammarHelloHarish" xml:space="preserve">
+    <value>Hello Harish</value>
+  </data>
   <data name="ListGrammarHelloMayank" xml:space="preserve">
     <value>Hello Mayank</value>
+  </data>
+  <data name="ListGrammarHelloPrashant" xml:space="preserve">
+    <value>Hello Prashant</value>
+  </data>
+  <data name="ListGrammarHelloSujoy" xml:space="preserve">
+    <value>Hello Sujoy</value>
+  </data>
+  <data name="ListGrammarHelloSujoyMukherjee" xml:space="preserve">
+    <value>Hello Sujoy Mukherjee</value>
   </data>
   <data name="ListGrammarHelloTanveer" xml:space="preserve">
     <value>Hello Tanveer</value>
   </data>
   <data name="ListGrammarHelpText" xml:space="preserve">
-    <value>Tap the microphone, and speak. This scenario uses continuous recognition to provide a global-command type scenario. 
+    <value>Tap the microphone, and speak. 
 Try saying 'Go Home', 'Call Nita', 'Go to Contoso Studio', 'Send Email'.</value>
     <comment>result textblock help text for non-recoui variants.</comment>
   </data>

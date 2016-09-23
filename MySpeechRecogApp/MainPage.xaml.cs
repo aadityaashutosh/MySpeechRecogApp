@@ -41,5 +41,10 @@ namespace MySpeechRecogApp
         {
             this.Frame.Navigate(typeof(SpeechToTextUsingList));
         }
+
+        private void SRGSContinuous_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ContinuousDictionaryRecog));
+        }
     }
 }
