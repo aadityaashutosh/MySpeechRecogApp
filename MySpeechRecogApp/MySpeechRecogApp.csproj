@@ -132,6 +132,9 @@
     <Content Include="SRGS\en-IN\SRGSColors.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="SRGS\en-US\SRGSColors.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

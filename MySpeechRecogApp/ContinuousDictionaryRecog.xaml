@@ -17,7 +17,7 @@
             <StackPanel Margin="0,0,0,10">
                 <TextBlock Text="Description:" Style="{StaticResource SampleHeaderTextStyle}"/>
                 <TextBlock Style="{StaticResource ScenarioDescriptionTextStyle}" TextWrapping="Wrap">
-                    This sample showcases continuous recognition using an SRGS/GRXML grammar for asynchronous voice commands.
+                    Color Recognizer: using SRGS.
                 </TextBlock>
             </StackPanel>
 
